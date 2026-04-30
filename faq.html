@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ — Japan Auto Supply</title>
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar" id="topBar">
+    <div class="top-bar-inner">
+      <a href="mailto:info@japanautosupply.com" class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        info@japanautosupply.com
+      </a>
+      <a href="tel:+819012345678" class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +81 90-1234-5678
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="Japan Auto Supply" class="nav-logo-img nav-logo-img-footer" />
+            <span class="nav-logo-text">Japan <span>Auto</span> Supply</span>
+          </a>
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html">About</a>
+      <a href="faq.html" class="nav-active">FAQ</a>
+    </div>
+    <a href="contact.html" class="btn btn-red">Get Your Vehicle Quote</a>
+  </nav>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-badge">FAQ</div>
+      <h1>Frequently Asked <span class="red">Questions</span></h1>
+      <p>Answers to the most common questions from dealers. If yours isn't here, just ask us.</p>
+    </div>
+  </section>
+
+  <section class="page-section bg-white">
+    <div class="container faq-container">
+
+      <div class="faq-category">
+        <h2 class="faq-category-title">&#128338; Getting Started</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do I place an order?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Send your vehicle requirements via WhatsApp or our contact form. Include make/model, year range, budget, quantity, and destination port. We'll reply within a few hours with options. No account or complex forms needed &mdash; a WhatsApp message is enough.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Do I need to be an established dealer?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>We primarily work with businesses buying vehicles for resale. We're not the right partner for individual buyers. Whether you're a small dealer ordering 2&ndash;3 vehicles or a larger operation with monthly orders, we're happy to talk.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What information do you need to start a search?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>At minimum: vehicle type or model, budget per unit, quantity, and destination port. The more specific you are, the better we can match &mdash; but a broad brief works too and we can narrow it down together.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Is there a minimum order quantity?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>No strict minimum. We've handled single-vehicle and 20+ unit orders. Larger orders are more cost-effective proportionally. We'll always be upfront about what makes commercial sense.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2 class="faq-category-title"> Pricing &amp; Fees</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How do you charge for your service?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>We charge a sourcing fee per vehicle, built into the total quoted price. The price you approve is the price you pay for the Japan side. Import duties and taxes in your destination country are separate and your responsibility.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What does the quoted price include?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Our all-in quote covers: auction purchase price, buyer's premium, domestic transport in Japan, export documentation, and ocean freight to your destination port (CIF). It does not include destination import duties, local port handling, or inland transport within your country.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What currency and payment methods do you accept?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>We invoice in USD or JPY and accept international wire transfers (T/T). We do not accept cash, cryptocurrency, or PayPal for commercial orders.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">When do I pay?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Payment is due after you approve your selected vehicles and before we proceed to auction. We don't ask for money just to search. Once you confirm and pay, we go to auction within 1&ndash;2 business days.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2 class="faq-category-title"> Vehicles &amp; Condition</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What auction grades do you typically source?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>We typically source Grade 4 and above (4, 4.5, 5, S) &mdash; vehicles with minimal cosmetic damage and sound mechanical condition. Grade 3.5 or 3 is available on specific request for budget-sensitive markets.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How accurate are the auction sheets?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Japan's auction inspection system is widely regarded as the most rigorous in the world. Vehicles are inspected by trained assessors before each sale using a standardised format across all major networks. The grading is generally very reliable. We always review sheets carefully and flag anything inconsistent before presenting options.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I request specific colours, specs, or trim levels?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Yes. The more specific your requirements, the longer the search may take. Some combinations are rare in Japan, so we'll tell you upfront if your spec will be difficult to find at your budget.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Do the vehicles come with service history?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Many Japanese vehicles include a service booklet documenting dealership maintenance. We request this where available. However, not every auction vehicle retains full service history, so we don't guarantee it for every unit.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2 class="faq-category-title"> Shipping &amp; Logistics</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How long does shipping take?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Transit times vary by destination: Mombasa ~4&ndash;5 weeks, Dar es Salaam ~4&ndash;5 weeks, Lagos ~5&ndash;7 weeks, Durban ~3&ndash;4 weeks, Tema ~5&ndash;6 weeks. Add 1&ndash;2 weeks for Japan-side processing. Total from payment to arrival is typically 6&ndash;10 weeks.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">How are vehicles shipped &mdash; RoRo or container?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Most vehicles ship via RoRo (Roll-on Roll-off), the standard method for used vehicle exports from Japan. Container shipping is available on request &mdash; typically used for multiple vehicles or high-value units requiring extra protection.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I track my shipment?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Yes. Once the vehicle is loaded we provide the vessel name, voyage number, and bill of lading reference for tracking on public maritime sites. We also send proactive updates at purchase, export clearance, vessel departure, and estimated arrival.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What documents do I receive for import clearance?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>You receive: Japanese Export Certificate, Bill of Lading, Commercial Invoice, Packing List, Deregistration Certificate, and the Auction Inspection Sheet. These cover standard import clearance requirements in most destination countries.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <h2 class="faq-category-title">&#128721; Problems &amp; After-Sale</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">What if the vehicle arrives with damage?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Shipping damage is covered under marine cargo insurance, which we include with every shipment. Photograph everything at the port before taking delivery and contact us immediately &mdash; we'll help file the insurance claim. Pre-existing issues accurately noted on the auction sheet are part of the condition you approved before purchase.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Can I cancel after payment?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>Once a vehicle is purchased at auction, cancellation is not possible &mdash; auction purchases are binding and immediate. Before payment, take as much time as you need to review options. After payment and purchase, the transaction is final.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Do you offer warranties?<span class="faq-arrow">&#9660;</span></button>
+          <div class="faq-answer"><p>We are a sourcing broker, not a manufacturer or dealership. Vehicles are sold in as-inspected condition based on the auction sheet. This is standard across the Japanese used vehicle export industry.</p></div>
+        </div>
+      </div>
+
+      <div class="faq-cta-box">
+        <h3>Still have a question?</h3>
+        <p>If you didn't find what you were looking for, reach out directly. We usually respond within a couple of hours.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:20px;">
+          <a href="https://wa.me/819012345678" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+          <a href="contact.html" class="btn btn-red">Send a Message</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo" style="margin-bottom:14px; display:inline-flex;">
+            <img src="logo.jpg" alt="Japan Auto Supply" class="nav-logo-img nav-logo-img-footer" />
+            <span class="nav-logo-text footer-logo-text">Japan <span>Auto</span> Supply</span>
+          </a>
+          <p>Your trusted partner for sourcing vehicles from Japanese auctions. Reliable, transparent, and professional export services.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Vehicle Sourcing</a>
+          <a href="#">Auction Access</a>
+          <a href="#">Export Documentation</a>
+          <a href="#">International Shipping</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>Yokohama, Kanagawa, Japan</p>
+          <p>info@japanautosupply.com</p>
+          <p>+81 90-1234-5678</p>
+          <p>Mon&#8211;Fri 9:00&#8211;18:00 JST</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Japan Auto Supply. All rights reserved.</span>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script>
+function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('faq-open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('faq-open'));if(!isOpen)item.classList.add('faq-open');}
+
+    // Top bar — show at ceiling, hide on scroll
+    const topBar = document.getElementById('topBar');
+    const navbar = document.querySelector('.navbar');
+    const BAR_H = topBar.offsetHeight;
+    function updateTopBar() {
+      if (window.scrollY <= 2) {
+        topBar.classList.remove('top-bar-hidden');
+        navbar.style.top = BAR_H + 'px';
+      } else {
+        topBar.classList.add('top-bar-hidden');
+        navbar.style.top = '0';
+      }
+    }
+    window.addEventListener('scroll', updateTopBar, { passive: true });
+    updateTopBar();
+  </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search — Japan Auto Supply</title>
+  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar" id="topBar">
+    <div class="top-bar-inner">
+      <a href="mailto:info@japanautosupply.com" class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        info@japanautosupply.com
+      </a>
+      <a href="tel:+819012345678" class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +81 90-1234-5678
+      </a>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.jpg" alt="Japan Auto Supply" class="nav-logo-img nav-logo-img-footer" />
+            <span class="nav-logo-text">Japan <span>Auto</span> Supply</span>
+          </a>
+        <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="search.html" class="nav-active">Search</a>
+      <a href="services.html">Services</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <a href="contact.html" class="btn btn-red">Get Your Vehicle Quote</a>
+  </nav>
+  <section class="page-hero">
+    <div class="container">
+      <div class="section-badge">Live Inventory</div>
+      <h1>Search <span class="red">Vehicles</span></h1>
+      <p>Sample vehicles from recent auctions. Stock changes daily &mdash; contact us for live availability and real-time pricing.</p>
+    </div>
+  </section>
+
+  <section class="page-section bg-white">
+    <div class="container">
+      <div class="stock-notice"><span class="stock-notice-icon"></span><div><strong>How our stock works:</strong> The vehicles below are representative samples from recent auctions. Availability changes daily. Contact us with your requirements and we'll search current live listings within a few hours.</div></div>
+      <div class="filter-bar">
+        <div class="filter-group"><label>Type</label><select><option>All Types</option><option>Sedan</option><option>SUV / 4WD</option><option>Van / Minivan</option><option>Hatchback</option><option>Pickup Truck</option></select></div>
+        <div class="filter-group"><label>Make</label><select><option>All Makes</option><option>Toyota</option><option>Honda</option><option>Nissan</option><option>Mazda</option><option>Mitsubishi</option><option>Subaru</option></select></div>
+        <div class="filter-group"><label>Year</label><select><option>All Years</option><option>2023&ndash;2024</option><option>2021&ndash;2022</option><option>2019&ndash;2020</option></select></div>
+        <div class="filter-group"><label>Budget (USD)</label><select><option>Any Budget</option><option>Under $8,000</option><option>$8,000&ndash;$12,000</option><option>$12,000&ndash;$18,000</option><option>$18,000+</option></select></div>
+        <a href="contact.html" class="btn btn-red" style="align-self:flex-end;">Request This Spec</a>
+      </div>
+      <div class="cars-grid" style="margin-top:36px;">
+
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Toyota Corolla Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
+          <div class="car-details">
+            <div class="car-name">Toyota Corolla Hybrid</div><div class="car-trim">G Edition &bull; Hybrid &bull; X</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">35,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,680,000</div><div class="spec-sub">~$11,200</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&q=80" alt="Honda Vezel Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
+          <div class="car-details">
+            <div class="car-name">Honda Vezel Hybrid</div><div class="car-trim">Z Version &bull; Hybrid &bull; e:HEV X</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">42,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,450,000</div><div class="spec-sub">~$9,700</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Toyota Aqua" /><span class="badge-sold">Sold</span><span class="badge-grade">Grade 4.5</span></div>
+          <div class="car-details">
+            <div class="car-name">Toyota Aqua</div><div class="car-trim">S Style &bull; Hybrid &bull; G&#176;MS</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">28,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,320,000</div><div class="spec-sub">~$8,800</div></div>
+            </div>
+            <a href="contact.html" class="btn-similar">Similar Available</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80" alt="Nissan Note e-POWER" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
+          <div class="car-details">
+            <div class="car-name">Nissan Note e-POWER</div><div class="car-trim">X &bull; e-POWER &bull; MID</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">55,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,180,000</div><div class="spec-sub">~$7,900</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Mazda Demio" /><span class="badge-available">Available</span><span class="badge-grade">Grade 3.5</span></div>
+          <div class="car-details">
+            <div class="car-name">Mazda Demio</div><div class="car-trim">15S &bull; Hybrid &bull; S Touring</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">48,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;980,000</div><div class="spec-sub">~$6,500</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Toyota RAV4 Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
+          <div class="car-details">
+            <div class="car-name">Toyota RAV4 Hybrid</div><div class="car-trim">G&#176;Z &bull; Hybrid &bull; Adventure 4WD</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">25,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;2,850,000</div><div class="spec-sub">~$19,000</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80" alt="Toyota Hiace Van" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
+          <div class="car-details">
+            <div class="car-name">Toyota Hiace Van</div><div class="car-trim">GL &bull; Diesel &bull; Long Body</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">62,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;2,100,000</div><div class="spec-sub">~$14,000</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Subaru Forester" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
+          <div class="car-details">
+            <div class="car-name">Subaru Forester</div><div class="car-trim">2.5i-L &bull; AWD &bull; EyeSight</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">38,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,980,000</div><div class="spec-sub">~$13,200</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+        <div class="car-card">
+          <div class="car-image"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&q=80" alt="Mitsubishi Outlander PHEV" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
+          <div class="car-details">
+            <div class="car-name">Mitsubishi Outlander PHEV</div><div class="car-trim">G &bull; Plug-in Hybrid &bull; 4WD</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">29,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;3,200,000</div><div class="spec-sub">~$21,300</div></div>
+            </div>
+            <a href="contact.html" class="btn-request">Request Info</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px;">
+        <p style="color:var(--gray);margin-bottom:16px;">Don't see exactly what you need? We source to your exact specifications.</p>
+        <a href="contact.html" class="btn btn-red">Request a Custom Search</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section bg-off-white" id="grades">
+    <div class="container">
+      <h2 class="section-title center">Understanding <span class="red">Auction Grades</span></h2>
+      <p class="section-sub center">Japan uses a standardised grading system for all auctioned vehicles.</p>
+      <div class="grade-grid">
+        <div class="grade-card grade-s"><div class="grade-label">S</div><h4>Excellent / Near New</h4><p>Virtually no wear. Often low mileage or near-new dealer stock.</p></div>
+        <div class="grade-card grade-5"><div class="grade-label">5</div><h4>Excellent</h4><p>Minimal scratches or blemishes. Interior and mechanical in excellent condition.</p></div>
+        <div class="grade-card grade-45"><div class="grade-label">4.5</div><h4>Very Good</h4><p>Minor surface marks only. No structural damage. Our most common sourced grade.</p></div>
+        <div class="grade-card grade-4"><div class="grade-label">4</div><h4>Good</h4><p>Small dents or scratches, easily repaired. Mechanically sound. Strong value grade.</p></div>
+        <div class="grade-card grade-35"><div class="grade-label">3.5</div><h4>Above Average</h4><p>Visible minor damage. Fully functional. Good budget option for resale markets.</p></div>
+        <div class="grade-card grade-3"><div class="grade-label">3</div><h4>Average</h4><p>Noticeable wear or minor repair needed. Sourced on specific request only.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Can't Find What You're Looking For?</h2>
+      <p>Tell us your exact spec. We'll search live auctions and come back with options.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/819012345678" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+        <a href="contact.html" class="btn btn-outline-white">Send a Custom Request</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo footer-logo" style="margin-bottom:14px; display:inline-flex;">
+            <img src="logo.jpg" alt="Japan Auto Supply" class="nav-logo-img nav-logo-img-footer" />
+            <span class="nav-logo-text footer-logo-text">Japan <span>Auto</span> Supply</span>
+          </a>
+          <p>Your trusted partner for sourcing vehicles from Japanese auctions. Reliable, transparent, and professional export services.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="services.html">Services</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="about.html">About</a>
+          <a href="faq.html">FAQ</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Vehicle Sourcing</a>
+          <a href="#">Auction Access</a>
+          <a href="#">Export Documentation</a>
+          <a href="#">International Shipping</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>Yokohama, Kanagawa, Japan</p>
+          <p>info@japanautosupply.com</p>
+          <p>+81 90-1234-5678</p>
+          <p>Mon&#8211;Fri 9:00&#8211;18:00 JST</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Japan Auto Supply. All rights reserved.</span>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Top bar — show at ceiling, hide on scroll
+    const topBar = document.getElementById('topBar');
+    const navbar = document.querySelector('.navbar');
+    const BAR_H = topBar.offsetHeight;
+    function updateTopBar() {
+      if (window.scrollY <= 2) {
+        topBar.classList.remove('top-bar-hidden');
+        navbar.style.top = BAR_H + 'px';
+      } else {
+        topBar.classList.add('top-bar-hidden');
+        navbar.style.top = '0';
+      }
+    }
+    window.addEventListener('scroll', updateTopBar, { passive: true });
+    updateTopBar();
+  </script>
+</body>
+</html>
