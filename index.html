@@ -366,6 +366,68 @@
   </section>
 
   <!-- CTA BANNER -->
+  <!-- FAQ -->
+  <section class="page-section bg-white">
+    <div class="container faq-container">
+      <div class="section-badge" style="text-align:center;margin-bottom:12px;">GET EXPERT ASSISTANCE</div>
+      <h2 class="section-title center">Frequently asked <span class="red">questions</span></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Is it safe to buy a vehicle from Japan Auto Supply?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How can I buy a vehicle from Japan Auto Supply?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">What happens to my deposit if I can't find the vehicle I want?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">I placed a bid but didn't win the vehicle I wanted. What should I do? Do I need to deposit again?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">I won the bid for a vehicle, but what happens if I decide not to buy it?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How do I know the exact condition of the vehicles? Are there any accidents or scratches?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How can I know if there is a mechanical issue with the vehicle? What if I buy a faulty car?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Do you ship vehicles to my country?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How much tax will I have to pay in my country?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Is it better to ship by container or RO-RO?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">Can I see the chassis numbers of the vehicles?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How is the payment processed after I purchase a vehicle?<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">How do I pick up the vehicle from the port? I have never done this before.<span class="faq-arrow">&#9660;</span></button>
+        <div class="faq-answer"><p></p></div>
+      </div>
+
+    </div>
+  </section>
+
   <section class="cta-banner">
     <div class="container">
       <h2>Ready to Source Your Next Vehicles?</h2>
@@ -437,7 +499,7 @@
   </footer>
 
   <script>
-    // Top bar — show at ceiling, hide on scroll
+    function toggleFaq(btn){const item=btn.parentElement;const isOpen=item.classList.contains('faq-open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('faq-open'));if(!isOpen)item.classList.add('faq-open');}
     // Hamburger menu
     const hamburger = document.getElementById('navHamburger');
     const navLinks  = document.querySelector('.nav-links');

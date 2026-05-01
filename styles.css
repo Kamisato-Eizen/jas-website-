@@ -2593,71 +2593,53 @@ a {
 /* ============================================================
    FAQ PAGE — extras
    ============================================================ */
-.faq-container {
-  max-width: 800px;
-}
-
-.faq-category {
-  margin-bottom: 48px;
-}
-
-.faq-category-title {
-  font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 2px solid var(--light-gray);
-}
+.faq-container {}
 
 .faq-item {
-  border: 1.5px solid var(--light-gray);
-  border-radius: 10px;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #e8e8e8;
   overflow: hidden;
-  transition: border-color 0.2s;
 }
-
-.faq-item.faq-open {
-  border-color: var(--red);
+.faq-item:first-of-type {
+  border-top: 1px solid #e8e8e8;
 }
 
 .faq-question {
   width: 100%;
-  background: var(--white);
+  background: transparent;
   border: none;
-  padding: 18px 20px;
+  padding: 18px 4px;
   text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: var(--font-display);
-  font-size: 0.97rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   color: var(--dark);
-  transition: background 0.2s;
+  transition: color 0.15s;
+  gap: 16px;
 }
 
 .faq-question:hover {
-  background: var(--off-white);
+  color: var(--red);
 }
 
 .faq-arrow {
-  color: var(--red);
-  transition: transform 0.3s;
+  color: #aaa;
+  transition: transform 0.25s, color 0.15s;
   flex-shrink: 0;
-  margin-left: 12px;
+  font-size: 0.8rem;
 }
 
 .faq-open .faq-arrow {
   transform: rotate(180deg);
+  color: var(--red);
 }
 
 .faq-answer {
   display: none;
-  padding: 0 20px 20px;
-  background: var(--white);
+  padding: 0 4px 16px;
 }
 
 .faq-open .faq-answer {
@@ -2668,7 +2650,6 @@ a {
   font-size: 0.9rem;
   color: var(--gray);
   line-height: 1.75;
-  margin-top: 10px;
 }
 
 .faq-cta-box {
@@ -3788,7 +3769,6 @@ a {
   .footer-col h4 { margin-bottom: 10px; }
 
   /* --- FAQ --- */
-  .faq-container { max-width: 100%; }
 
   /* --- Search / filter bar --- */
   .filter-bar { flex-direction: column; gap: 10px; }
