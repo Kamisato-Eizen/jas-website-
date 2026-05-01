@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search — Japan Auto Supply</title>
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -27,9 +27,9 @@
   <nav class="navbar">
     <a href="index.html" class="nav-logo">
       <img src="logo.jpg" alt="Japan Auto Supply" class="nav-logo-img nav-logo-img-footer" />
-            <span class="nav-logo-text">Japan <span>Auto</span> Supply</span>
-          </a>
-        <div class="nav-links">
+      <span class="nav-logo-text">Japan <span>Auto</span> Supply</span>
+    </a>
+    <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="search.html" class="nav-active">Search</a>
       <a href="services.html">Services</a>
@@ -38,7 +38,11 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="contact.html" class="btn btn-red">Get Your Vehicle Quote</a>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
   <section class="page-hero">
     <div class="container">
       <div class="section-badge">Live Inventory</div>
@@ -49,126 +53,529 @@
 
   <section class="page-section bg-white">
     <div class="container">
-      <div class="stock-notice"><span class="stock-notice-icon"></span><div><strong>How our stock works:</strong> The vehicles below are representative samples from recent auctions. Availability changes daily. Contact us with your requirements and we'll search current live listings within a few hours.</div></div>
-      <div class="filter-bar">
-        <div class="filter-group"><label>Type</label><select><option>All Types</option><option>Sedan</option><option>SUV / 4WD</option><option>Van / Minivan</option><option>Hatchback</option><option>Pickup Truck</option></select></div>
-        <div class="filter-group"><label>Make</label><select><option>All Makes</option><option>Toyota</option><option>Honda</option><option>Nissan</option><option>Mazda</option><option>Mitsubishi</option><option>Subaru</option></select></div>
-        <div class="filter-group"><label>Year</label><select><option>All Years</option><option>2023&ndash;2024</option><option>2021&ndash;2022</option><option>2019&ndash;2020</option></select></div>
-        <div class="filter-group"><label>Budget (USD)</label><select><option>Any Budget</option><option>Under $8,000</option><option>$8,000&ndash;$12,000</option><option>$12,000&ndash;$18,000</option><option>$18,000+</option></select></div>
-        <a href="contact.html" class="btn btn-red" style="align-self:flex-end;">Request This Spec</a>
-      </div>
-      <div class="cars-grid" style="margin-top:36px;">
 
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Toyota Corolla Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
-          <div class="car-details">
-            <div class="car-name">Toyota Corolla Hybrid</div><div class="car-trim">G Edition &bull; Hybrid &bull; X</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">35,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,680,000</div><div class="spec-sub">~$11,200</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=600&q=80" alt="Honda Vezel Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
-          <div class="car-details">
-            <div class="car-name">Honda Vezel Hybrid</div><div class="car-trim">Z Version &bull; Hybrid &bull; e:HEV X</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">42,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,450,000</div><div class="spec-sub">~$9,700</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Toyota Aqua" /><span class="badge-sold">Sold</span><span class="badge-grade">Grade 4.5</span></div>
-          <div class="car-details">
-            <div class="car-name">Toyota Aqua</div><div class="car-trim">S Style &bull; Hybrid &bull; G&#176;MS</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">28,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,320,000</div><div class="spec-sub">~$8,800</div></div>
-            </div>
-            <a href="contact.html" class="btn-similar">Similar Available</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80" alt="Nissan Note e-POWER" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
-          <div class="car-details">
-            <div class="car-name">Nissan Note e-POWER</div><div class="car-trim">X &bull; e-POWER &bull; MID</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">55,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,180,000</div><div class="spec-sub">~$7,900</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80" alt="Mazda Demio" /><span class="badge-available">Available</span><span class="badge-grade">Grade 3.5</span></div>
-          <div class="car-details">
-            <div class="car-name">Mazda Demio</div><div class="car-trim">15S &bull; Hybrid &bull; S Touring</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">48,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;980,000</div><div class="spec-sub">~$6,500</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80" alt="Toyota RAV4 Hybrid" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
-          <div class="car-details">
-            <div class="car-name">Toyota RAV4 Hybrid</div><div class="car-trim">G&#176;Z &bull; Hybrid &bull; Adventure 4WD</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">25,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;2,850,000</div><div class="spec-sub">~$19,000</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80" alt="Toyota Hiace Van" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
-          <div class="car-details">
-            <div class="car-name">Toyota Hiace Van</div><div class="car-trim">GL &bull; Diesel &bull; Long Body</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">62,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;2,100,000</div><div class="spec-sub">~$14,000</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="Subaru Forester" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4</span></div>
-          <div class="car-details">
-            <div class="car-name">Subaru Forester</div><div class="car-trim">2.5i-L &bull; AWD &bull; EyeSight</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">38,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;1,980,000</div><div class="spec-sub">~$13,200</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
-        <div class="car-card">
-          <div class="car-image"><img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&q=80" alt="Mitsubishi Outlander PHEV" /><span class="badge-available">Available</span><span class="badge-grade">Grade 4.5</span></div>
-          <div class="car-details">
-            <div class="car-name">Mitsubishi Outlander PHEV</div><div class="car-trim">G &bull; Plug-in Hybrid &bull; 4WD</div>
-            <div class="car-specs">
-              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
-              <div class="spec"><div class="spec-label">km</div><div class="spec-value">29,000</div></div>
-              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">&#165;3,200,000</div><div class="spec-sub">~$21,300</div></div>
-            </div>
-            <a href="contact.html" class="btn-request">Request Info</a>
-          </div>
-        </div>
+      <div class="stock-notice">
+        <span class="stock-notice-icon"></span>
+        <div><strong>How our stock works:</strong> The vehicles below are representative samples from recent auctions. Availability changes daily. Contact us with your requirements and we'll search current live listings within a few hours.</div>
       </div>
-      <div style="text-align:center;margin-top:48px;">
+
+      <!-- FILTER BAR -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <select id="filterMaker">
+            <option value="">Select Maker</option>
+            <option value="Aston Martin">Aston Martin</option>
+            <option value="Bentley">Bentley</option>
+            <option value="BMW">BMW</option>
+            <option value="Ferrari">Ferrari</option>
+            <option value="Lamborghini">Lamborghini</option>
+            <option value="Maserati">Maserati</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Tesla">Tesla</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <select id="filterFromYear">
+            <option value="">Select Start Year</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <select id="filterToYear">
+            <option value="">Select End Year</option>
+          </select>
+        </div>
+        <button class="filter-clear" id="filterClear">Clear</button>
+        <a href="contact.html" class="btn btn-red" style="white-space:nowrap;padding:8px 18px;font-size:0.83rem;">Request This Spec</a>
+      </div>
+
+      <!-- Count line -->
+      <div class="cars-count-bar">
+        <span class="cars-count" id="carsCount"></span>
+      </div>
+
+      <!-- =====================================================
+           CAR LISTINGS
+           =====================================================
+           HOW TO ADD A CAR — copy a block below from
+           CAR START to CAR END and paste
+           it anywhere inside .cars-grid.
+
+           Fields on the <div class="car-card"> element:
+             data-maker   — brand name  e.g. "Porsche"
+             data-year    — 4-digit year e.g. "2025"
+             data-name    — full display name
+             data-trim    — variant / drivetrain line
+             data-km      — mileage with commas e.g. "1,200"
+             data-price   — price string e.g. "$198,000"
+             data-grade   — number only  e.g. "5" or "4.5"
+             data-engine  — engine description
+             data-img     — path to image e.g. "cars/name.jpg"
+                            (comma-separate multiple images)
+             data-status  — "available" or "sold"
+
+           The Details button URL is auto-built by JS —
+           you never need to edit the href manually.
+      ===================================================== -->
+
+      <div class="cars-grid" id="carsGrid">
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Porsche" data-year="2025"
+             data-name="Porsche 911 Carrera S" data-trim="992.2 · PDK · Coupe"
+             data-km="1,200" data-price="$198,000" data-grade="5"
+             data-engine="3.0L Twin-Turbo Flat-6"
+             data-img="cars/porsche-911-2025.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/porsche-911-2025.jpg" alt="Porsche 911 Carrera S" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Porsche 911 Carrera S</div>
+            <div class="car-trim">992.2 &bull; PDK &bull; Coupe</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2025</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">1,200</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$198,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Porsche" data-year="2024"
+             data-name="Porsche Cayenne GTS" data-trim="PTS · Sport Chrono · AWD"
+             data-km="8,500" data-price="$142,000" data-grade="4.5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/porsche-cayenne-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/porsche-cayenne-2024.jpg" alt="Porsche Cayenne GTS" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Porsche Cayenne GTS</div>
+            <div class="car-trim">PTS &bull; Sport Chrono &bull; AWD</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">8,500</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$142,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Mercedes-Benz" data-year="2025"
+             data-name="Mercedes-Benz S 580" data-trim="W223 · 4MATIC · AMG Line"
+             data-km="3,000" data-price="$165,000" data-grade="5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/mercedes-sclass-2025.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/mercedes-sclass-2025.jpg" alt="Mercedes-Benz S 580" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Mercedes-Benz S 580</div>
+            <div class="car-trim">W223 &bull; 4MATIC &bull; AMG Line</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2025</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">3,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$165,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Mercedes-Benz" data-year="2024"
+             data-name="Mercedes-Benz GLS 600 Maybach" data-trim="Azure · V8 · Mulliner"
+             data-km="12,000" data-price="$210,000" data-grade="4.5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/mercedes-gls-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/mercedes-gls-2024.jpg" alt="Mercedes-Benz GLS 600 Maybach" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Mercedes-Benz GLS 600</div>
+            <div class="car-trim">Maybach &bull; 4MATIC &bull; Designo</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">12,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$210,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Mercedes-Benz" data-year="2023"
+             data-name="Mercedes-AMG GT 63 S" data-trim="4-Door · 4MATIC+ · Edition 1"
+             data-km="18,000" data-price="$155,000" data-grade="4.5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/mercedes-amg-2023.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/mercedes-amg-2023.jpg" alt="Mercedes-AMG GT 63 S" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Mercedes-AMG GT 63 S</div>
+            <div class="car-trim">4-Door &bull; 4MATIC+ &bull; Edition 1</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">18,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$155,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="BMW" data-year="2023"
+             data-name="BMW M4 Competition" data-trim="G82 · xDrive · M Carbon"
+             data-km="14,500" data-price="$98,000" data-grade="4.5"
+             data-engine="3.0L Twin-Turbo I6"
+             data-img="cars/bmw-m4-2023.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/bmw-m4-2023.jpg" alt="BMW M4 Competition" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">BMW M4 Competition</div>
+            <div class="car-trim">G82 &bull; xDrive &bull; M Carbon</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">14,500</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$98,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="BMW" data-year="2024"
+             data-name="BMW M850i xDrive" data-trim="G14 · Convertible · Individual"
+             data-km="5,800" data-price="$125,000" data-grade="5"
+             data-engine="4.4L Twin-Turbo V8"
+             data-img="cars/bmw-8series-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/bmw-8series-2024.jpg" alt="BMW M850i xDrive" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">BMW M850i xDrive</div>
+            <div class="car-trim">G14 &bull; Convertible &bull; Individual</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">5,800</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$125,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="BMW" data-year="2020"
+             data-name="BMW M8 Gran Coupé" data-trim="F93 · Competition · xDrive"
+             data-km="28,000" data-price="$82,000" data-grade="4.5"
+             data-engine="4.4L Twin-Turbo V8"
+             data-img="cars/bmw-m8-2020.jpg" data-status="sold">
+          <div class="car-image">
+            <img src="cars/bmw-m8-2020.jpg" alt="BMW M8 Gran Coupé" />
+            <span class="badge-sold">Sold</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">BMW M8 Gran Coupé</div>
+            <div class="car-trim">F93 &bull; Competition &bull; xDrive</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2020</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">28,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$82,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Lamborghini" data-year="2021"
+             data-name="Lamborghini Huracán EVO" data-trim="LP 640-4 · AWD · Coupe"
+             data-km="9,200" data-price="$245,000" data-grade="4.5"
+             data-engine="5.2L NA V10"
+             data-img="cars/lamborghini-huracan-2021.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/lamborghini-huracan-2021.jpg" alt="Lamborghini Huracán EVO" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Lamborghini Huracán EVO</div>
+            <div class="car-trim">LP 640-4 &bull; AWD &bull; Coupe</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">9,200</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$245,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Lamborghini" data-year="2022"
+             data-name="Lamborghini Huracán STO" data-trim="RWD · Track-Spec · Livery"
+             data-km="4,100" data-price="$335,000" data-grade="5"
+             data-engine="5.2L NA V10"
+             data-img="cars/lamborghini-huracan-sto-2022.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/lamborghini-huracan-sto-2022.jpg" alt="Lamborghini Huracán STO" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Lamborghini Huracán STO</div>
+            <div class="car-trim">RWD &bull; Track-Spec &bull; Livery</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2022</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">4,100</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$335,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Ferrari" data-year="2013"
+             data-name="Ferrari California T" data-trim="Handling Speciale · Convertible"
+             data-km="32,000" data-price="$115,000" data-grade="4"
+             data-engine="3.9L Twin-Turbo V8"
+             data-img="cars/ferrari-california-2013.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/ferrari-california-2013.jpg" alt="Ferrari California T" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Ferrari California T</div>
+            <div class="car-trim">Handling Speciale &bull; Convertible</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2013</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">32,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$115,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Ferrari" data-year="2005"
+             data-name="Ferrari F430" data-trim="F1 Paddle-Shift · Coupe · RWD"
+             data-km="41,000" data-price="$88,000" data-grade="4"
+             data-engine="4.3L NA V8"
+             data-img="cars/ferrari-f430-2005.jpg" data-status="sold">
+          <div class="car-image">
+            <img src="cars/ferrari-f430-2005.jpg" alt="Ferrari F430" />
+            <span class="badge-sold">Sold</span>
+            <span class="badge-grade">Grade 4</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Ferrari F430</div>
+            <div class="car-trim">F1 Paddle-Shift &bull; Coupe &bull; RWD</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2005</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">41,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$88,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Bentley" data-year="2024"
+             data-name="Bentley Bentayga EWB" data-trim="Azure · V8 · Mulliner"
+             data-km="6,000" data-price="$285,000" data-grade="5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/bentley-bentayga-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/bentley-bentayga-2024.jpg" alt="Bentley Bentayga EWB" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Bentley Bentayga EWB</div>
+            <div class="car-trim">Azure &bull; V8 &bull; Mulliner</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">6,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$285,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Bentley" data-year="2021"
+             data-name="Bentley Continental GT" data-trim="V8 · Coupe · Blackline"
+             data-km="19,500" data-price="$178,000" data-grade="4.5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/bentley-continental-2021.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/bentley-continental-2021.jpg" alt="Bentley Continental GT" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Bentley Continental GT</div>
+            <div class="car-trim">V8 &bull; Coupe &bull; Blackline</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">19,500</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$178,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Aston Martin" data-year="2021"
+             data-name="Aston Martin DBX 707" data-trim="707 · AWD · Q by Aston"
+             data-km="22,000" data-price="$148,000" data-grade="4.5"
+             data-engine="4.0L Twin-Turbo V8"
+             data-img="cars/aston-martin-dbx-2021.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/aston-martin-dbx-2021.jpg" alt="Aston Martin DBX 707" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Aston Martin DBX 707</div>
+            <div class="car-trim">707 &bull; AWD &bull; Q by Aston</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2021</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">22,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$148,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Maserati" data-year="2023"
+             data-name="Maserati Levante Trofeo" data-trim="V8 · AWD · Carbon Pack"
+             data-km="11,000" data-price="$132,000" data-grade="4.5"
+             data-engine="3.8L Twin-Turbo V8"
+             data-img="cars/maserati-levante-2023.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/maserati-levante-2023.jpg" alt="Maserati Levante Trofeo" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 4.5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Maserati Levante Trofeo</div>
+            <div class="car-trim">V8 &bull; AWD &bull; Carbon Pack</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2023</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">11,000</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$132,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Tesla" data-year="2024"
+             data-name="Tesla Model 3 Performance" data-trim="Highland · AWD · Pearl White"
+             data-km="7,400" data-price="$48,000" data-grade="5"
+             data-engine="Electric AWD"
+             data-img="cars/tesla-model3-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/tesla-model3-2024.jpg" alt="Tesla Model 3 Performance" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Tesla Model 3 Performance</div>
+            <div class="car-trim">Highland &bull; AWD &bull; Pearl White</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">7,400</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$48,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+        <!-- CAR START -->
+        <div class="car-card"
+             data-maker="Tesla" data-year="2024"
+             data-name="Tesla Model Y Long Range" data-trim="AWD · Pearl White"
+             data-km="9,800" data-price="$44,000" data-grade="5"
+             data-engine="Electric AWD"
+             data-img="cars/tesla-modely-2024.jpg" data-status="available">
+          <div class="car-image">
+            <img src="cars/tesla-modely-2024.jpg" alt="Tesla Model Y Long Range" />
+            <span class="badge-available">Available</span>
+            <span class="badge-grade">Grade 5</span>
+          </div>
+          <div class="car-details">
+            <div class="car-name">Tesla Model Y Long Range</div>
+            <div class="car-trim">AWD &bull; Pearl White</div>
+            <div class="car-specs">
+              <div class="spec"><div class="spec-label">Year</div><div class="spec-value">2024</div></div>
+              <div class="spec"><div class="spec-label">km</div><div class="spec-value">9,800</div></div>
+              <div class="spec"><div class="spec-label">Price</div><div class="spec-value gold-text">$44,000</div></div>
+            </div>
+            <a href="#" class="btn-detail">Details</a>
+          </div>
+        </div>
+        <!-- CAR END -->
+
+      </div><!-- /.cars-grid -->
+
+      <!-- Pagination -->
+      <div class="pagination-wrap" id="pagination"></div>
+
+      <div style="text-align:center;margin-top:40px;">
         <p style="color:var(--gray);margin-bottom:16px;">Don't see exactly what you need? We source to your exact specifications.</p>
         <a href="contact.html" class="btn btn-red">Request a Custom Search</a>
       </div>
@@ -246,10 +653,141 @@
   </footer>
 
   <script>
-    // Top bar — show at ceiling, hide on scroll
+  (function () {
+    const PAGE_SIZE = 20;
+    let currentPage = 1;
+
+    const allCards   = Array.from(document.querySelectorAll('.car-card'));
+    const makerSel   = document.getElementById('filterMaker');
+    const fromSel    = document.getElementById('filterFromYear');
+    const toSel      = document.getElementById('filterToYear');
+    const clearBtn   = document.getElementById('filterClear');
+    const countEl    = document.getElementById('carsCount');
+    const paginEl    = document.getElementById('pagination');
+
+    // Populate year dropdowns 2000–2025
+    for (let y = 2000; y <= 2025; y++) {
+      fromSel.innerHTML += `<option value="${y}">${y}</option>`;
+      toSel.innerHTML   += `<option value="${y}">${y}</option>`;
+    }
+
+    // Auto-build detail page URL from data attributes
+    allCards.forEach(card => {
+      const btn = card.querySelector('.btn-detail');
+      if (!btn) return;
+      const p = new URLSearchParams({
+        name:   card.dataset.name   || '',
+        maker:  card.dataset.maker  || '',
+        year:   card.dataset.year   || '',
+        km:     card.dataset.km     || '',
+        price:  card.dataset.price  || '',
+        grade:  card.dataset.grade  || '',
+        trim:   card.dataset.trim   || '',
+        engine: card.dataset.engine || '',
+        img:    card.dataset.img    || '',
+        status: card.dataset.status || 'available'
+      });
+      btn.href = 'car-detail.html?' + p.toString();
+    });
+
+    function getVisible() {
+      const maker    = makerSel.value;
+      const fromYear = parseInt(fromSel.value) || 0;
+      const toYear   = parseInt(toSel.value)   || 9999;
+
+      return allCards.filter(card => {
+        const cardYear  = parseInt(card.dataset.year) || 0;
+        const cardMaker = card.dataset.maker || '';
+
+        if (maker    && cardMaker !== maker)   return false;
+        if (fromYear && cardYear  < fromYear)  return false;
+        if (toYear < 9999 && cardYear > toYear) return false;
+        return true;
+      });
+    }
+
+    function renderPagination(total, totalPages) {
+      if (totalPages <= 1) { paginEl.innerHTML = ''; return; }
+
+      // Build page number list
+      const pages = [];
+      pages.push(1);
+      if (currentPage > 3) pages.push('…');
+      for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+        pages.push(i);
+      }
+      if (currentPage < totalPages - 2) pages.push('…');
+      if (totalPages > 1) pages.push(totalPages);
+
+      let html = '<div class="pagination-inner">';
+      html += `<button class="pg-btn" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>Previous</button>`;
+      pages.forEach(p => {
+        if (p === '…') {
+          html += `<span class="pg-ellipsis">…</span>`;
+        } else {
+          html += `<button class="pg-btn${p === currentPage ? ' pg-active' : ''}" data-page="${p}">${p}</button>`;
+        }
+      });
+      html += `<button class="pg-btn" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>Next</button>`;
+      html += '</div>';
+      html += `<div class="pagination-count">Showing ${(currentPage - 1) * PAGE_SIZE + 1}–${Math.min(currentPage * PAGE_SIZE, total)} of ${total}</div>`;
+
+      paginEl.innerHTML = html;
+      paginEl.querySelectorAll('.pg-btn[data-page]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentPage = parseInt(btn.dataset.page);
+          render();
+          window.scrollTo({ top: document.getElementById('carsGrid').offsetTop - 100, behavior: 'smooth' });
+        });
+      });
+    }
+
+    function render() {
+      const visible    = getVisible();
+      const total      = visible.length;
+      const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const end   = start + PAGE_SIZE;
+
+      allCards.forEach(c => c.style.display = 'none');
+      visible.slice(start, end).forEach(c => c.style.display = '');
+
+      countEl.textContent = total === 0
+        ? 'No vehicles match your filters.'
+        : `Showing ${start + 1}–${Math.min(end, total)} of ${total} vehicles`;
+
+      renderPagination(total, totalPages);
+    }
+
+    // Filter listeners
+    [makerSel, fromSel, toSel].forEach(el =>
+      el.addEventListener('change', () => { currentPage = 1; render(); })
+    );
+
+    clearBtn.addEventListener('click', () => {
+      makerSel.value = '';
+      fromSel.value  = '';
+      toSel.value    = '';
+      currentPage = 1;
+      render();
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('nav-open');
+      });
+    }
+
+    // Top bar scroll
     const topBar = document.getElementById('topBar');
     const navbar = document.querySelector('.navbar');
-    const BAR_H = topBar.offsetHeight;
+    const BAR_H  = topBar.offsetHeight;
     function updateTopBar() {
       if (window.scrollY <= 2) {
         topBar.classList.remove('top-bar-hidden');
@@ -261,6 +799,10 @@
     }
     window.addEventListener('scroll', updateTopBar, { passive: true });
     updateTopBar();
+
+    // Initial render
+    render();
+  })();
   </script>
 </body>
 </html>

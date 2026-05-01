@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>How It Works — Japan Auto Supply</title>
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -38,6 +38,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="contact.html" class="btn btn-red">Get Your Vehicle Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <section class="page-hero">
     <div class="container">
@@ -51,6 +54,7 @@
   <section class="hiw-section">
     <div class="container">
       <div class="hiw-v2">
+        <div class="hiw-step-wrap">
 
         <!-- STEP 1 — image left, content right -->
         <div class="hiw-v2-img" style="background-image:url('hiw/01-search-bidding.jpg'); background-size:cover; background-position:center;"></div>
@@ -72,6 +76,9 @@
             <li>Other specific preferences (colour, grade, transmission)</li>
           </ul>
         </div>
+        </div>
+
+        <div class="hiw-step-wrap hiw-even">
 
         <!-- STEP 2 — content left, image right -->
         <div class="hiw-v2-content">
@@ -86,6 +93,9 @@
         </div>
         <div class="hiw-v2-conn"></div>
         <div class="hiw-v2-img" style="background-image:url('hiw/02-deposit.jpg'); background-size:cover; background-position:center;"></div>
+        </div>
+
+        <div class="hiw-step-wrap">
 
         <!-- STEP 3 — image left, content right -->
         <div class="hiw-v2-img" style="background-image:url('hiw/03-win-invoice.jpg'); background-size:cover; background-position:center;"></div>
@@ -100,6 +110,9 @@
           <h3>Win &amp; Invoice</h3>
           <p>If you win, we issue your invoice including auction fees, inland transport, and shipping options.</p>
         </div>
+        </div>
+
+        <div class="hiw-step-wrap hiw-even">
 
         <!-- STEP 4 — content left, image right -->
         <div class="hiw-v2-content">
@@ -114,6 +127,9 @@
         </div>
         <div class="hiw-v2-conn"></div>
         <div class="hiw-v2-img" style="background-image:url('hiw/04-payment-booking.jpg'); background-size:cover; background-position:center;"></div>
+        </div>
+
+        <div class="hiw-step-wrap">
 
         <!-- STEP 5 — image left, content right -->
         <div class="hiw-v2-img" style="background-image:url('hiw/05-yard-photos.jpg'); background-size:cover; background-position:center;"></div>
@@ -128,6 +144,9 @@
           <h3>Yard &amp; Photos</h3>
           <p class="hiw-placeholder">— content coming soon —</p>
         </div>
+        </div>
+
+        <div class="hiw-step-wrap hiw-even">
 
         <!-- STEP 6 — content left, image right -->
         <div class="hiw-v2-content">
@@ -142,6 +161,9 @@
         </div>
         <div class="hiw-v2-conn"></div>
         <div class="hiw-v2-img" style="background-image:url('hiw/06-shipping.jpg'); background-size:cover; background-position:center;"></div>
+        </div>
+
+        <div class="hiw-step-wrap">
 
         <!-- STEP 7 — image left, content right -->
         <div class="hiw-v2-img" style="background-image:url('hiw/07-documents.jpg'); background-size:cover; background-position:center;"></div>
@@ -156,6 +178,9 @@
           <h3>Documents</h3>
           <p>Export documents are prepared and sent to you ahead of arrival.</p>
         </div>
+        </div>
+
+        <div class="hiw-step-wrap hiw-even">
 
         <!-- STEP 8 — content left, image right -->
         <div class="hiw-v2-content">
@@ -170,6 +195,7 @@
         </div>
         <div class="hiw-v2-conn"></div>
         <div class="hiw-v2-img" style="background-image:url('hiw/08-arrival-collection.jpg'); background-size:cover; background-position:center;"></div>
+        </div>
 
       </div>
     </div>
@@ -232,6 +258,15 @@
 
   <script>
     // Top bar — show at ceiling, hide on scroll
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('nav-open');
+      });
+    }
     const topBar = document.getElementById('topBar');
     const navbar = document.querySelector('.navbar');
     const BAR_H = topBar.offsetHeight;

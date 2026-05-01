@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Japan Auto Supply</title>
-  <link rel="stylesheet" href="styles.css?v=8" />
+  <link rel="stylesheet" href="styles.css?v=14" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 </head>
@@ -38,6 +38,9 @@
       <a href="faq.html">FAQ</a>
     </div>
     <a href="contact.html" class="btn btn-red">Get Your Vehicle Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
   <section class="page-hero">
     <div class="container">
@@ -177,6 +180,15 @@
 
   <script>
     // Top bar — show at ceiling, hide on scroll
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('nav-open');
+      });
+    }
     const topBar = document.getElementById('topBar');
     const navbar = document.querySelector('.navbar');
     const BAR_H = topBar.offsetHeight;
