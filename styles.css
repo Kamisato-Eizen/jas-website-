@@ -2223,8 +2223,7 @@ a {
 .srv-img-placeholder {
   width: 190px;
   flex-shrink: 0;
-  background: #dcdcdc;
-  /* swap in: background-image: url('services/...'); background-size: cover; background-position: center; */
+  background: #dcdcdc center / cover no-repeat;
 }
 
 .srv-badges {
