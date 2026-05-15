@@ -2380,61 +2380,79 @@ a {
 
 /* Auction grade guide */
 .grade-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 8px;
-}
-@media (max-width: 700px) {
-  .grade-grid { grid-template-columns: 1fr 1fr; }
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e8e8e8;
 }
 
 .grade-card {
-  border-radius: 10px;
-  padding: 22px;
-  border: 2px solid transparent;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-radius: 0;
 }
+.grade-card:last-child { border-bottom: none; }
 
 .grade-label {
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   font-weight: 800;
-  margin-bottom: 8px;
+  text-align: center;
+  padding: 18px 10px;
+  line-height: 1.2;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grade-card-body {
+  padding: 16px 22px;
+  border-left: 1px solid rgba(0,0,0,0.07);
 }
 
 .grade-card h4 {
   font-family: var(--font-display);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 
 .grade-card p {
   font-size: 0.84rem;
   color: var(--gray);
-  line-height: 1.6;
+  line-height: 1.55;
+  margin: 0;
 }
 
-.grade-s   { background: #e8f9f0; border-color: #2ecc71; }
-.grade-s .grade-label { color: #27ae60; }
-.grade-5   { background: #e8f4ff; border-color: #3498db; }
-.grade-5 .grade-label { color: #2980b9; }
-.grade-45  { background: #fef6e4; border-color: var(--gold); }
-.grade-45 .grade-label { color: #c27d00; }
-.grade-4   { background: #fff8e6; border-color: #f39c12; }
-.grade-4 .grade-label { color: #e67e22; }
-.grade-35  { background: #fff0f0; border-color: #e74c3c; }
-.grade-35 .grade-label { color: var(--red); }
-.grade-ra  { background: #fdf3e3; border-color: #e67e22; }
-.grade-ra .grade-label { color: #c0580a; font-size: 1.3rem; }
-.grade-3   { background: #f5f5f5; border-color: #bbb; }
-.grade-3 .grade-label { color: #888; }
-.grade-r   { background: #fdecea; border-color: #c0392b; }
-.grade-r .grade-label { color: #c0392b; }
-.grade-2   { background: #f0eaf7; border-color: #8e44ad; }
-.grade-2 .grade-label { color: #7d3c98; }
-.grade-blank { background: #f2f2f2; border-color: #999; }
-.grade-blank .grade-label { color: #555; font-size: 0.95rem; font-weight: 700; line-height: 1.4; }
+.grade-s   { background: #fff; }
+.grade-s .grade-label { background: #e8f9f0; color: #27ae60; }
+.grade-5   { background: #fff; }
+.grade-5 .grade-label { background: #e8f4ff; color: #2980b9; }
+.grade-45  { background: #fff; }
+.grade-45 .grade-label { background: #fef6e4; color: #c27d00; }
+.grade-4   { background: #fff; }
+.grade-4 .grade-label { background: #fff8e6; color: #e67e22; }
+.grade-35  { background: #fff; }
+.grade-35 .grade-label { background: #fff0f0; color: var(--red); }
+.grade-ra  { background: #fff; }
+.grade-ra .grade-label { background: #fdf3e3; color: #c0580a; font-size: 1rem; }
+.grade-3   { background: #fff; }
+.grade-3 .grade-label { background: #f5f5f5; color: #888; }
+.grade-r   { background: #fff; }
+.grade-r .grade-label { background: #fdecea; color: #c0392b; }
+.grade-2   { background: #fff; }
+.grade-2 .grade-label { background: #f0eaf7; color: #7d3c98; }
+.grade-blank { background: #fff; }
+.grade-blank .grade-label { background: #f2f2f2; color: #555; font-size: 0.8rem; font-weight: 700; line-height: 1.4; }
 
 
 /* ============================================================
