@@ -2183,6 +2183,15 @@ a {
   font-style: italic;
 }
 
+.hiw-v2-day {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--red);
+  margin: -4px 0 10px !important;
+}
+
 /* ============================================================
    SERVICES PAGE
    ============================================================ */
@@ -3193,41 +3202,111 @@ a {
 }
 
 /* Trust cards grid (6 cards) */
-.trust-cards-grid {
+/* Trust editorial grid */
+.trust-editorial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px 64px;
+  margin: 48px 0 56px;
 }
 
-.trust-feature-card {
-  background: white;
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  box-shadow: var(--shadow);
+.trust-editorial-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-.trust-feature-card h4 {
+.tei-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--red);
+  opacity: 0.13;
+  line-height: 1;
+  min-width: 52px;
+  margin-top: 2px;
+}
+
+.tei-body h4 {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 700;
-  margin: 12px 0 8px;
+  margin: 0 0 8px;
   color: var(--dark);
 }
 
-.trust-feature-card p {
-  font-size: 0.87rem;
+.tei-body p {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* JAS-specific sub-section divider */
+.trust-jas-divider {
+  text-align: center;
+  position: relative;
+  margin: 0 0 36px;
+}
+.trust-jas-divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
+.trust-jas-divider span {
+  background: var(--off-white);
+  padding: 0 18px;
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999;
+}
+
+/* JAS-specific row */
+.trust-jas-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.trust-jas-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.trust-jas-item .tfc-icon {
+  flex-shrink: 0;
+}
+
+.trust-jas-item h4 {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--dark);
+}
+
+.trust-jas-item p {
+  font-size: 0.84rem;
   color: var(--gray);
   line-height: 1.6;
+  margin: 0;
 }
 
 .tfc-icon {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .tfc-icon.red-icon    { background: #fde8e7; }
@@ -3790,3 +3869,116 @@ a {
 
 }
 /* End mobile */
+
+/* ============================================================
+   GET STARTED PAGE
+   ============================================================ */
+.gs-section {
+  padding: 72px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.gs-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.gs-step-reverse {
+  direction: rtl;
+}
+.gs-step-reverse > * {
+  direction: ltr;
+}
+
+.gs-step-label {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.gs-step-title {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.gs-text p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.75;
+}
+
+.gs-checklist {
+  list-style: none;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gs-checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.55;
+}
+
+.gs-checklist li::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  background: var(--red);
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  margin-top: 2px;
+}
+
+.gs-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  background-color: #e8e8e8;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.gs-img-placeholder-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: #aaa;
+  font-style: italic;
+  background: #f0f0f0;
+}
+
+/* Hide placeholder text when image is loaded */
+.gs-img[style*="url('get-started/step"]:not([style*="url('')"]) .gs-img-placeholder-text {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .gs-step, .gs-step-reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 32px;
+  }
+}
