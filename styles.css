@@ -2385,6 +2385,9 @@ a {
   gap: 16px;
   margin-top: 8px;
 }
+@media (max-width: 700px) {
+  .grade-grid { grid-template-columns: 1fr 1fr; }
+}
 
 .grade-card {
   border-radius: 10px;
@@ -2422,8 +2425,16 @@ a {
 .grade-4 .grade-label { color: #e67e22; }
 .grade-35  { background: #fff0f0; border-color: #e74c3c; }
 .grade-35 .grade-label { color: var(--red); }
+.grade-ra  { background: #fdf3e3; border-color: #e67e22; }
+.grade-ra .grade-label { color: #c0580a; font-size: 1.3rem; }
 .grade-3   { background: #f5f5f5; border-color: #bbb; }
 .grade-3 .grade-label { color: #888; }
+.grade-r   { background: #fdecea; border-color: #c0392b; }
+.grade-r .grade-label { color: #c0392b; }
+.grade-2   { background: #f0eaf7; border-color: #8e44ad; }
+.grade-2 .grade-label { color: #7d3c98; }
+.grade-blank { background: #f2f2f2; border-color: #999; }
+.grade-blank .grade-label { color: #555; font-size: 0.95rem; font-weight: 700; line-height: 1.4; }
 
 
 /* ============================================================
