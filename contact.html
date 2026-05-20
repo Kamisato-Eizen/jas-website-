@@ -102,22 +102,26 @@
         <!-- RIGHT: Message form -->
         <div class="cct-form">
           <h2 class="cct-form-title">Send Us a Message</h2>
-          <div class="cct-field">
-            <input type="text" placeholder="Full Name" />
-          </div>
-          <div class="cct-field">
-            <input type="email" placeholder="Email Address" />
-          </div>
-          <div class="cct-field">
-            <input type="text" placeholder="Subject" />
-          </div>
-          <div class="cct-field">
-            <textarea placeholder="Your Message"></textarea>
-          </div>
-          <button type="button" class="cct-btn" onclick="return false;">
-            Send Message
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-          </button>
+          <form id="contactForm" action="https://formspree.io/f/xojbjkgn" method="POST" novalidate>
+            <div class="cct-field">
+              <input type="text" name="name" placeholder="Full Name" required />
+            </div>
+            <div class="cct-field">
+              <input type="email" name="email" placeholder="Email Address" required />
+            </div>
+            <div class="cct-field">
+              <input type="text" name="subject" placeholder="Subject" />
+            </div>
+            <div class="cct-field">
+              <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <div id="formSuccess" style="display:none; color:#27ae60; font-size:0.9rem; margin-bottom:12px; font-weight:600;">Message sent. We'll be in touch shortly.</div>
+            <div id="formError" style="display:none; color:#e74c3c; font-size:0.9rem; margin-bottom:12px; font-weight:600;">Something went wrong. Please try again.</div>
+            <button type="submit" class="cct-btn" id="formSubmit">
+              Send Message
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
         </div>
 
       </div>
@@ -179,6 +183,39 @@
     </div>
   </footer>
 <script>
+    // Contact form — Formspree AJAX
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('formSubmit');
+        const successMsg = document.getElementById('formSuccess');
+        const errorMsg = document.getElementById('formError');
+        btn.disabled = true;
+        btn.textContent = 'Sending...';
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'none';
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            successMsg.style.display = 'block';
+            form.reset();
+          } else {
+            errorMsg.style.display = 'block';
+          }
+        } catch {
+          errorMsg.style.display = 'block';
+        }
+        btn.disabled = false;
+        btn.innerHTML = 'Send Message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+      });
+    }
+  </script>
+  <script>
     // Top bar — show at ceiling, hide on scroll
     // Hamburger menu
     const hamburger = document.getElementById('navHamburger');
