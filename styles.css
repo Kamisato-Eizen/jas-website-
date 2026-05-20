@@ -3789,11 +3789,12 @@ a {
   }
   .brand-card {
     flex: unset;
-    height: 64px;
+    aspect-ratio: 1 / 1;
+    height: auto;
   }
   .brand-card img {
-    width: 44px;
-    height: 34px;
+    width: 65%;
+    height: 65%;
   }
   .hero-stats {
     flex-wrap: wrap;
