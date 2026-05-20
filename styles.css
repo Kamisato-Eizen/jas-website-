@@ -3779,6 +3779,22 @@ a {
     border-radius: 12px;
   }
   .hero-slides { height: 320px; }
+
+  /* Brand strip — 3 rows of 4 */
+  .brand-strip-inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 16px;
+    gap: 8px;
+  }
+  .brand-card {
+    flex: unset;
+    height: 64px;
+  }
+  .brand-card img {
+    width: 44px;
+    height: 34px;
+  }
   .hero-stats {
     flex-wrap: wrap;
     gap: 12px;
