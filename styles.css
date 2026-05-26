@@ -3696,12 +3696,10 @@ a {
    ============================================================ */
 @media (max-width: 768px) {
 
-  /* --- Top bar: show on mobile, smaller text --- */
+  /* --- Top bar: show on mobile --- */
   .top-bar-inner {
-    flex-direction: column;
-    gap: 4px;
-    padding: 6px 16px;
-    align-items: flex-start;
+    padding: 0 16px;
+    gap: 12px;
   }
   .top-bar-item { font-size: 0.72rem; }
 
