@@ -208,6 +208,14 @@
   </footer>
 
   <script>
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks  = document.querySelector('.nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navLinks.classList.toggle('nav-open');
+      });
+    }
     const topBar = document.getElementById('topBar');
     const navbar = document.querySelector('.navbar');
     const BAR_H = topBar.offsetHeight;
