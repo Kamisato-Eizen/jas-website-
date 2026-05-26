@@ -3539,8 +3539,7 @@ a {
   display: flex;
   align-items: center;
   gap: 36px;
-  padding: 136px 40px 60px 40px;
-  padding-left: max(40px, calc((100vw - 1500px) / 2 + 40px));
+  padding: 136px max(40px, calc((100vw - 1500px) / 2 + 40px)) 60px max(40px, calc((100vw - 1500px) / 2 + 40px));
 }
 
 /* Left column: headline text — sized so slideshow left edge is at 50vw */
@@ -3586,10 +3585,10 @@ a {
   font-weight: 700;
 }
 
-/* Centre column: slideshow — shorter, vertically centered */
+/* Centre column: slideshow — 16:9, vertically centered */
 .hero-slide-wrap {
   position: relative;
-  width: min(calc(50vw - 40px), 710px);
+  width: min(calc(50vw - max(40px, calc((100vw - 1500px) / 2 + 40px)) - 18px), 710px);
   flex-shrink: 0;
   border-radius: 12px;
   overflow: hidden;
@@ -3600,7 +3599,8 @@ a {
 .hero-slides {
   position: relative;
   width: 100%;
-  height: 400px;
+  aspect-ratio: 16 / 9;
+  height: auto;
 }
 
 /* Right column: form card */
@@ -3775,7 +3775,7 @@ a {
   }
   .hero-inner {
     flex-direction: column;
-    padding: 48px 0 36px;
+    padding: 48px 16px 36px;
     gap: 32px;
   }
   .hero-left h1 {
@@ -3793,7 +3793,7 @@ a {
     width: 100%;
     border-radius: 12px;
   }
-  .hero-slides { height: 320px; }
+  .hero-slides { aspect-ratio: 16 / 9; height: auto; }
 
   /* Trust editorial section */
   .trust-editorial-grid {
