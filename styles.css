@@ -3696,9 +3696,14 @@ a {
    ============================================================ */
 @media (max-width: 768px) {
 
-  /* --- Top bar: hide on mobile --- */
-  .top-bar { display: none !important; }
-  .navbar  { top: 0 !important; }
+  /* --- Top bar: show on mobile, smaller text --- */
+  .top-bar-inner {
+    flex-direction: column;
+    gap: 4px;
+    padding: 6px 16px;
+    align-items: flex-start;
+  }
+  .top-bar-item { font-size: 0.72rem; }
 
   /* --- Navbar --- */
   .navbar {
