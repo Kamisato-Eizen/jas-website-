@@ -3784,6 +3784,17 @@ a {
   }
   .hero-slides { height: 320px; }
 
+  /* Trust editorial section */
+  .trust-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 32px 0 40px;
+  }
+  .trust-jas-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
   /* Carousel — one card at a time */
   .car-carousel-outer {
     padding: 0 12px;
