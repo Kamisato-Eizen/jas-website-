@@ -3698,9 +3698,9 @@ a {
 
   /* --- Top bar: show on mobile --- */
   .top-bar-inner {
-    padding: 0 16px;
-    gap: 12px;
-    justify-content: center;
+    padding: 0 16px !important;
+    gap: 12px !important;
+    justify-content: center !important;
   }
   .top-bar-item { font-size: 0.72rem; }
 
