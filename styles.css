@@ -3697,12 +3697,18 @@ a {
 @media (max-width: 768px) {
 
   /* --- Top bar: show on mobile --- */
+  .top-bar { justify-content: center; }
   .top-bar-inner {
-    padding: 0 16px !important;
-    gap: 12px !important;
+    display: flex !important;
     justify-content: center !important;
+    align-items: center;
+    gap: 16px;
+    padding: 0 12px !important;
+    width: 100%;
   }
-  .top-bar-item { font-size: 0.72rem; }
+  .top-bar-item {
+    font-size: 0.72rem;
+  }
 
   /* --- Navbar --- */
   .navbar {
