@@ -3784,6 +3784,15 @@ a {
   }
   .hero-slides { height: 320px; }
 
+  /* Carousel — one card at a time */
+  .car-carousel-outer {
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .cc-card {
+    flex: 0 0 calc(100% - 0px);
+  }
+
   /* Brand strip — 3 rows of 4 */
   .brand-strip-inner {
     display: grid;
