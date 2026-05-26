@@ -3700,6 +3700,7 @@ a {
   .top-bar-inner {
     padding: 0 16px;
     gap: 12px;
+    justify-content: center;
   }
   .top-bar-item { font-size: 0.72rem; }
 
