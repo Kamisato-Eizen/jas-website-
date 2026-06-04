@@ -1,0 +1,218 @@
+/* ============================================================
+   JAS V3 — ANIMATION LAYER (overlaid on original styles)
+   ============================================================ */
+
+/* ── SCROLL REVEAL ─────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-left.in { opacity: 1; transform: translateX(0); }
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.reveal-right.in { opacity: 1; transform: translateX(0); }
+
+.d1 { transition-delay: 0.1s !important; }
+.d2 { transition-delay: 0.2s !important; }
+.d3 { transition-delay: 0.3s !important; }
+.d4 { transition-delay: 0.4s !important; }
+.d5 { transition-delay: 0.5s !important; }
+
+/* ── HERO ──────────────────────────────────────────────────── */
+/* Smoother slideshow crossfade */
+.hero-slide {
+  transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ── CAR CARDS ─────────────────────────────────────────────── */
+.cc-card {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.35s !important;
+}
+.cc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(232, 25, 44, 0.12);
+}
+.cc-card .cc-img img {
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cc-card:hover .cc-img img {
+  transform: scale(1.04);
+}
+
+/* ── SEARCH / LISTING CARDS ────────────────────────────────── */
+.car-card {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.car-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14) !important;
+}
+.car-card .car-image img {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+.car-card:hover .car-image img {
+  transform: scale(1.04);
+}
+
+/* ── BUTTONS ───────────────────────────────────────────────── */
+.btn, .btn-red, .btn-whatsapp, .btn-outline-white, .btn-detail, .nav-cta {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.2s,
+              opacity 0.2s !important;
+}
+.btn:hover, .btn-red:hover, .btn-detail:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 25, 44, 0.28);
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+/* ── TRUST / STEP CARDS ────────────────────────────────────── */
+.trust-card, .step-card, .hiw-card, .stat-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+.trust-card:hover, .step-card:hover, .hiw-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ── BRAND CARDS ───────────────────────────────────────────── */
+.brand-card {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s !important;
+}
+.brand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ── GS STEP IMAGES ────────────────────────────────────────── */
+.gs-img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s;
+}
+.gs-img:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ── FAQ ───────────────────────────────────────────────────── */
+/* Take over from display:none/block — use max-height instead */
+.faq-answer {
+  display: block !important;     /* override original display:none */
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;  /* collapse padding when closed */
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+              padding-bottom 0.45s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+/* open state — set by both JS (inline) and the original .faq-open class */
+.faq-answer.open,
+.faq-open .faq-answer {
+  max-height: 2000px !important;   /* generous cap — content determines actual height */
+  padding-bottom: 16px !important;
+}
+
+/* ── NAV LINKS ─────────────────────────────────────────────── */
+.nav-links a {
+  transition: color 0.2s, background 0.2s !important;
+}
+
+/* ── STAT NUMBERS ──────────────────────────────────────────── */
+.stat-number, .hero-stat-num {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── GRADE ROWS ────────────────────────────────────────────── */
+.grade-card {
+  transition: background 0.2s, transform 0.2s !important;
+}
+.grade-card:hover {
+  background: rgba(232, 25, 44, 0.04) !important;
+  transform: translateX(3px);
+}
+
+/* ── SOCIAL BUTTONS ────────────────────────────────────────── */
+.social-link {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s !important;
+}
+.social-link:hover {
+  transform: translateY(-3px) scale(1.1);
+}
+
+/* ── PAGE HERO ENTRANCE ────────────────────────────────────── */
+@keyframes fadeSlideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-hero .section-badge {
+  animation: fadeSlideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.page-hero h1 {
+  animation: fadeSlideDown 0.7s 0.1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.page-hero p {
+  animation: fadeSlideDown 0.7s 0.2s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* ── HERO TEXT ENTRANCE ────────────────────────────────────── */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-badge      { animation: heroFadeUp 0.7s 0.1s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-inner h1   { animation: heroFadeUp 0.7s 0.2s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-subtext    { animation: heroFadeUp 0.7s 0.3s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-buttons    { animation: heroFadeUp 0.7s 0.4s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-trust      { animation: heroFadeUp 0.7s 0.5s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-stats      { animation: heroFadeUp 0.7s 0.55s cubic-bezier(0.4, 0, 0.2, 1) both; }
+.hero-slide-wrap { animation: heroFadeUp 0.9s 0.25s cubic-bezier(0.4, 0, 0.2, 1) both; }
+
+/* ── SECTION BADGE PULSE ───────────────────────────────────── */
+.section-badge::before, .section-badge .dot {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ── REDUCED MOTION ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal-left, .reveal-right,
+  .hero-badge, .hero-inner h1, .hero-subtext, .hero-buttons,
+  .hero-trust, .hero-stats, .hero-slide-wrap,
+  .page-hero .section-badge, .page-hero h1, .page-hero p {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
