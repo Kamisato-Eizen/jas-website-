@@ -21,20 +21,13 @@
       justify-content: center;
       transition: opacity 0.5s ease, visibility 0.5s ease;
     }
-    #loader.hide {
-      opacity: 0;
-      visibility: hidden;
-    }
-    #loader video {
-      width: min(320px, 60vw);
-      height: auto;
-      display: block;
-    }
+    #loader.hide { opacity: 0; visibility: hidden; }
+    #loader video { width: min(260px, 70vw); height: auto; display: block; }
   </style>
 </head>
 <body>
 
-  <!-- LOADING SCREEN -->
+  <!-- LOADING SCREEN (mobile only) -->
   <div id="loader">
     <video id="loaderVideo" src="logo-animation.mp4" autoplay muted playsinline></video>
   </div>
@@ -905,7 +898,13 @@
       const loader = document.getElementById('loader');
       const video  = document.getElementById('loaderVideo');
 
-      // Skip loader if already seen this session (i.e. navigated from another page)
+      // Desktop: skip entirely
+      if (window.innerWidth > 768) {
+        loader.style.display = 'none';
+        return;
+      }
+
+      // Mobile: skip if already seen this session
       if (sessionStorage.getItem('loaderShown')) {
         loader.style.display = 'none';
         return;
@@ -918,12 +917,11 @@
         sessionStorage.setItem('loaderShown', '1');
         loader.classList.add('hide');
       }
-      // Dismiss 1s before the video ends
       video.addEventListener('timeupdate', function() {
         if (video.duration && video.currentTime >= video.duration - 1) dismiss();
       });
       video.addEventListener('ended', dismiss);
-      setTimeout(dismiss, 4000); // fallback
+      setTimeout(dismiss, 4000);
     })();
   </script>
 </body>
