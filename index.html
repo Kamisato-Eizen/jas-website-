@@ -10,8 +10,34 @@
   <link rel="stylesheet" href="animations.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    #loader.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    #loader video {
+      width: min(320px, 60vw);
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <video id="loaderVideo" src="logo-animation.mp4" autoplay muted playsinline></video>
+  </div>
 
   <!-- TOP BAR -->
   <div class="top-bar" id="topBar">
@@ -874,5 +900,31 @@
     }
   </script>
   <script src="animations.js"></script>
+  <script>
+    (function() {
+      const loader = document.getElementById('loader');
+      const video  = document.getElementById('loaderVideo');
+
+      // Skip loader if already seen this session (i.e. navigated from another page)
+      if (sessionStorage.getItem('loaderShown')) {
+        loader.style.display = 'none';
+        return;
+      }
+
+      let dismissed = false;
+      function dismiss() {
+        if (dismissed) return;
+        dismissed = true;
+        sessionStorage.setItem('loaderShown', '1');
+        loader.classList.add('hide');
+      }
+      // Dismiss 1s before the video ends
+      video.addEventListener('timeupdate', function() {
+        if (video.duration && video.currentTime >= video.duration - 1) dismiss();
+      });
+      video.addEventListener('ended', dismiss);
+      setTimeout(dismiss, 4000); // fallback
+    })();
+  </script>
 </body>
 </html>
